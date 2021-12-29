@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@100;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro&family=Lora&family=Montserrat&family=Poppins:wght@100;300&display=swap');
+
+* {
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    background-color: #181719;
+    font-family: 'Montserrat', sans-serif;;
+}
+
+header {
+    display: flex; 
+    padding: 40px;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 75px;
+}
+
+.nav-label, .nav-menu {
+    display: none; 
+}
+
+.border {
+    padding: 20px;
+    border: 2px solid white;
+    height: 32px;
+    display: flex;
+    align-items: center;
+}
+.border span {
+    font-size: 14px; 
+    text-transform: uppercase;
+    font-family: 'Crimson Pro', serif;
+    font-weight: 200;
+    letter-spacing: 2px;
+}
+
+.navbar-list {
+    display: flex;
+    list-style: none;
+}
+.navbar-list li {
+    display: inline-block;
+    width: fit-content;
+}
+.navbar-list a{
+    text-decoration: none;
+    padding: 0px 50px;
+    font-weight: 700;
+    font-size: 18px;
+}
+.navbar-list li:hover span {
+    border-bottom: 3px solid white;
+}
+
+#main {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.main-left {
+    display: flex; 
+    max-width: 30vw;
+    width: 100%; 
+    flex-direction: column;
+    margin: 50px;
+    justify-content: center;
+    align-items: flex-start;
+}
+.main-left h1 {
+    font-weight: 500;
+    font-size: 48px;
+    font-family: 'Lora', serif;
+}
+.main-left p {
+    margin-top: 40px; 
+    width: 50%; 
+}
+.main-left span {
+    margin-top: 50px; 
+}
+
+.main-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    max-width: 60vw;
+    width: 100%;
+    margin-right: 30px;
+}
+.main-right img {
+    max-width: 80%; 
+    margin-right: 10px;
+}
+
+.box-opinion {
+    display: flex;
+    flex-direction: column;
+    background-color: #181719;
+    max-width: 410px; 
+    width: 100%; 
+    max-height: 189px;
+    height: 100%;
+    position: absolute;
+    top: 80%;
+    left: 67%;
+    padding: 10px;
+}
+.profile-info {
+    display: flex; 
+    justify-content: flex-start;
+    margin-left: 18px
+} 
+.profile-name-role {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 24px;
+}
+.name {
+    font-weight: 500;
+    font-size: 14px; 
+}
+.role {
+    font-size: 12px; 
+    font-weight: 400;
+    color: rgb(109, 112, 117);
+}
+.profile-info img{
+    border-radius: 50%;
+    width: 60px;    
+}
+.box-opinion h3 {
+    max-width: 287px;
+    width: 100%;
+    font-weight: 700;
+    font-size: 24px;
+    margin: 10px; 
+}
+
+footer {
+    display: flex; 
+    justify-content: center;
+    clear: both;
+    margin-top: 40px;
+}
+
+@media (max-width: 868px) {
+    #main {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .main-left p {
+        width: 100%; 
+    } 
+
+    .box-opinion {
+        width: 210px;
+        height: 120px;
+        position: absolute; 
+        top: 120%;
+        left: 40%; 
+    }
+    .box-opinion h3{
+        font-size: 14px
+    }
+    
+    .profile-info img {
+        width: 40px; 
+    }
+    .name {
+        font-size: 10px; 
+    }
+    .role {
+        font-size: 8px; 
+    }
+    .profile-name-role {
+        line-height: 16px;
+    }
+}
+
+@media (max-width: 626px) {
+    #main {
+        height: 100vh;
+        width: 100vw;
+        justify-content: center;
+        display: flex;
+    }
+    .main-left {
+        width: 500px; 
+    }
+    .main-left p {
+        width: 100%;
+    }
+    footer {
+        display: none; 
+    }
+
+    .navbar-list {
+        position: fixed; 
+        top: 90px; 
+        bottom: 0;
+        width: 100%;
+        left: 0;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        clip-path: circle(5.1% at 100% 0);
+        transition: clip-path 1s ease-in-out;
+    }
+
+    .nav-label {
+        display: block; 
+    }
+
+    .nav-menu:checked + .navbar-list {
+        clip-path: circle(141.4% at 100% 0);
+    }
+
+    .main-right {
+        width: 100%; 
+    }
+}
